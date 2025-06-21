@@ -39,3 +39,7 @@ This project simulates IoT sensor data and builds a real-time streaming data pip
     └── workflows/
         └── deploy.yml      # CI/CD pipeline using GitHub Actions
 
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
