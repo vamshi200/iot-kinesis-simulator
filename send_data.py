@@ -1,7 +1,10 @@
+import boto3
 import json
 import time
 import random
 from datetime import datetime
+
+firehose = boto3.client('firehose', region_name='us-east-1')  # Change region if needed
 
 def generate_sensor_data():
     return {
@@ -11,8 +14,15 @@ def generate_sensor_data():
         "timestamp": datetime.utcnow().isoformat()
     }
 
-# Loop forever and print one reading every 2 seconds
 while True:
     data = generate_sensor_data()
-    print(json.dumps(data))  # <- This is what shows up in your terminal
+    print(f"Sending: {data}")
+
+    firehose.put_record(
+        DeliveryStreamName='iot-sensor-firehose',  # Your Firehose stream name
+        Record={
+            'Data': json.dumps(data) + "\n"  # Firehose needs newline-delimited records
+        }
+    )
+
     time.sleep(2)

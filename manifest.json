@@ -1,0 +1,16 @@
+{
+  "fileLocations": [
+    {
+      "URIPrefixes": [
+        "s3://vamshi-iot-data-2025/"
+      ]
+    }
+  ],
+  "globalUploadSettings": {
+    "format": "JSON",
+    "delimiter": "\n",
+    "textqualifier": "'",
+    "containsHeader": "false"
+  }
+}
+
