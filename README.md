@@ -232,7 +232,7 @@ Pull requests are welcome! If you have ideas to extend the simulator (more senso
 ## 📨 Contact
 
 Author: Vamshi
-GitHub: [vamshik](https://github.com/vamshik)
+GitHub: [vamshi200](https://github.com/vamshi200)
 
 ---
 
